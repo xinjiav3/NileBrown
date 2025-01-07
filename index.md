@@ -5,5 +5,5 @@ description: Home Page
 hide: true
 ---
 
-Hi!
+Hi! <BR>
 be prepared to learn about arrays!
