@@ -5,4 +5,5 @@ description: Home Page
 hide: true
 ---
 
-My journey starts here.
+Hi!
+be prepared to learn about arrays!
