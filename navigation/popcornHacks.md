@@ -1,4 +1,5 @@
+---
 layout: page
-title: Popcorn hacks
+title: Popcorn Hacks One
 permalink: /pch1/
 ---
