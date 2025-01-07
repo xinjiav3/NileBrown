@@ -16,6 +16,7 @@ be prepared to learn about arrays!
      </a>
 </div>
 
+<br>
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
     <a href="{{site.baseurl}}/pch1" style="text-decoration: none;">
