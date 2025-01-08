@@ -14,4 +14,6 @@ Then, change the numbers to different foods of choice.
 
 Next, add 2 more foods of choice.
 
+Finally, change one of the foods to a drink.
+
 You should finish with 5 foods in your list; print every item one at a time.
