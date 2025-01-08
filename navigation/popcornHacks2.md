@@ -1,5 +1,0 @@
----
-layout: page
-title: Popcorn Hacks One
-permalink: /pch2/
----
