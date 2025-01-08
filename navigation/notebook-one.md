@@ -26,7 +26,7 @@ We can output any element from our list using the console.log function.
 
 For example:
 
-<script>
+
 %%javascript
 let list2 = [1, 2, 3, 4, 5];
 
@@ -36,7 +36,7 @@ console.log(list2[2]); // prints 3
 console.log(list2[3]); // prints 4
 console.log(list2[4]); // prints 5
 
-<script>
+
 To delete elements, we can use the pop() or splice() functions:
 
 pop() removes the last element of an array.
