@@ -1,6 +1,6 @@
 import pygame
-import time
 import random
+import time
 
 pygame.init()
 
@@ -13,14 +13,14 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Snake")
+pygame.display.set_caption("Snake Game")
 
 clock = pygame.time.Clock()
 font = pygame.font.SysFont("Arial", 25)
 
-def display_messag(msg, color, x, y):
+def display_message(msg, color, x, y):
     message = font.render(msg, True, color)
-    screen.blit(message, [x,y])
+    screen.blit(message, [x, y])
 
 def game_loop():
     snake_pos = [[100, 50], [90, 50], [80, 50]]
@@ -33,18 +33,19 @@ def game_loop():
 
     score = 0
 
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP and direction != "DOWN":
+                    change_to = "UP"
+                elif event.key == pygame.K_DOWN and direction != "UP":
+                    change_to = "DOWN"
+                elif event.key == pygame.K_LEFT and direction != "RIGHT":
+                    change_to = "LEFT"
+                elif event.key == pygame.K_RIGHT and direction != "LEFT":
+                    change_to = "RIGHT"
 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP and direction != "DOWN":
-                change_to = "UP"
-            elif event.key == pygame.K_DOWN and direction != "UP":
-                change_to = "DOWN"
-            elif event.key == pygame.K_LEFT and direction != "RIGHT":
-                change_to = "LEFT"
-            elif event.key == pygame.K_RIGHT and direction != "LEFT":
-                change_to = "RIGHT"
+        direction = change_to
 
         if direction == "UP":
             snake_pos[0][1] -= CELL_SIZE
@@ -65,7 +66,6 @@ while True:
             food_pos = [random.randrange(1, WIDTH // CELL_SIZE) * CELL_SIZE,
                         random.randrange(1, HEIGHT // CELL_SIZE) * CELL_SIZE]
         food_spawn = True
-
 
         snake_pos.insert(0, list(snake_pos[0]))
 
