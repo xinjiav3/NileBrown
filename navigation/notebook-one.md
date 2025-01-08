@@ -74,7 +74,10 @@ We use this command to add values:
 
 let list5=[]; //creates the blank list
 
-list5.push(1)
-list5.push(2)
-list5.push(3)
+list5.push(1);
+list5.push(2);
+list5.push(3);
+
 //this adds the elements 1,2, and 3 to the list
+
+<script>
