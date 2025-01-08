@@ -46,3 +46,13 @@ be prepared to learn about arrays!
      </a>
 </div>
 
+<br>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/pch3" style="text-decoration: none;">
+        <div style="background-color: #BCB88A; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Popcorn Hacks Three
+        </div>
+     </a>
+</div>
+
