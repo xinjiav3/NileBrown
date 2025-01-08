@@ -42,4 +42,8 @@ list.pop(); //this deletes the last value in the list.
 
 list.splice(3, 1); //The 3 indicates that you're deleting the 4th element, which is 4. The 1 tells how many elements you are deleting from that index, so since it's 1, we're just deleting the 4th element.
 
-We can add and assign values to elements in an array. 
+We can add and assign values to elements in an array. We use this command:
+
+%%js
+
+let list = [1,2,3,4,5];
