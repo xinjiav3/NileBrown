@@ -11,6 +11,8 @@ Arrays are variables that store a list of elements. In our example, we will have
 
 We create it like so:
 
+<script
+>
 %%javascript
 let list = [1, 2, 3, 4, 5];
 When we refer to an element in our array, we start with list[0].
@@ -19,10 +21,13 @@ In this case:
 list[0] = 1
 list[1] = 2
 list[2] = 3, etc.
+<script>
+
 We can output any element from our list using the console.log function.
 
 For example:
 
+<script>
 %%javascript
 let list2 = [1, 2, 3, 4, 5];
 
@@ -32,6 +37,7 @@ console.log(list2[2]); // prints 3
 console.log(list2[3]); // prints 4
 console.log(list2[4]); // prints 5
 
+<script>
 To delete elements, we can use the pop() or splice() functions:
 
 pop() removes the last element of an array.
