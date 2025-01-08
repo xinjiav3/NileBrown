@@ -12,9 +12,13 @@ Arrays are variables that store a list of elements. In our example, we will have
 
 We create it like so:
 
-%%js
+<script>
+
+%%javascript
 
 let list = [1,2,3,4,5];
+
+<script>
 
 When we refer to an element in our array, we start with list[0]. In this case, list[0] = 1. List[1] = 2, list[2] = 3, etc.
 
@@ -22,7 +26,9 @@ We can output any element from our list using the console.log function.
 
 ex: 
 
-%%js
+<script>
+
+%%javascript
 
 let list = [1,2,3,4,5];
 
@@ -32,9 +38,13 @@ console.log(list[2]); //this prints 3
 console.log(list[3]); //this prints 4
 console.log(list[4]); //this prints 5 
 
+<script>
+
 To delete one of the elements, we can use the pop(index) function or the splice() function. The pop function deletes the last element in a list, while splice deletes an element of your choosing. The formatting for each is below.
 
-%%js
+<script>
+
+%%javascript
 
 let list = [1,2,3,4,5];
 
@@ -42,8 +52,16 @@ list.pop(); //this deletes the last value in the list.
 
 list.splice(3, 1); //The 3 indicates that you're deleting the 4th element, which is 4. The 1 tells how many elements you are deleting from that index, so since it's 1, we're just deleting the 4th element.
 
+<script>
+
 We can add and assign values to elements in an array. We use this command:
 
-%%js
+<script>
+
+%%javascript
 
 let list = [1,2,3,4,5];
+
+list[2]=6; //this changes the element in the 2nd position' value from 3 to 6
+
+<script>
