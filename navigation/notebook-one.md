@@ -20,7 +20,7 @@ In this case:
 list[0] = 1
 list[1] = 2
 list[2] = 3, etc.
-<script>
+
 
 We can output any element from our list using the console.log function.
 
