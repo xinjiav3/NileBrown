@@ -30,13 +30,13 @@ ex:
 
 %%javascript
 
-let list = [1,2,3,4,5];
+let list2 = [1,2,3,4,5];
 
-console.log(list[0]); //this prints 1 as it is the first element in the array.
-console.log(list[1]); //this prints 2
-console.log(list[2]); //this prints 3
-console.log(list[3]); //this prints 4
-console.log(list[4]); //this prints 5 
+console.log(list2[0]); //this prints 1 as it is the first element in the array.
+console.log(list2[1]); //this prints 2
+console.log(list2[2]); //this prints 3
+console.log(list2[3]); //this prints 4
+console.log(list2[4]); //this prints 5 
 
 <script>
 
@@ -46,11 +46,11 @@ To delete one of the elements, we can use the pop(index) function or the splice(
 
 %%javascript
 
-let list = [1,2,3,4,5];
+let list3 = [1,2,3,4,5];
 
-list.pop(); //this deletes the last value in the list.
+list3.pop(); //this deletes the last value in the list.
 
-list.splice(3, 1); //The 3 indicates that you're deleting the 4th element, which is 4. The 1 tells how many elements you are deleting from that index, so since it's 1, we're just deleting the 4th element.
+list3.splice(3, 1); //The 3 indicates that you're deleting the 4th element, which is 4. The 1 tells how many elements you are deleting from that index, so since it's 1, we're just deleting the 4th element.
 
 <script>
 
@@ -60,8 +60,10 @@ We can add and assign values to elements in an array. We use this command:
 
 %%javascript
 
-let list = [1,2,3,4,5];
+let list4 = [1,2,3,4,5];
 
-list[2]=6; //this changes the element in the 2nd position' value from 3 to 6
+list4[2]=6; //this changes the element in the 2nd position' value from 3 to 6
+
+console.log(list4);
 
 <script>
