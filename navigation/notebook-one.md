@@ -54,7 +54,7 @@ list3.splice(3, 1); //The 3 indicates that you're deleting the 4th element, whic
 
 <script>
 
-We can add and assign values to elements in an array. We use this command:
+We can add and assign values to elements in an array. We use this command to change values
 
 <script>
 
@@ -67,3 +67,14 @@ list4[2]=6; //this changes the element in the 2nd position' value from 3 to 6
 console.log(list4);
 
 <script>
+
+We use this command to add values:
+
+<script>
+
+let list5=[]; //creates the blank list
+
+list5.push(1)
+list5.push(2)
+list5.push(3)
+//this adds the elements 1,2, and 3 to the list
