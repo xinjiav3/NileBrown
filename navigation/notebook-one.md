@@ -11,8 +11,7 @@ Arrays are variables that store a list of elements. In our example, we will have
 
 We create it like so:
 
-<script
->
+
 %%javascript
 let list = [1, 2, 3, 4, 5];
 When we refer to an element in our array, we start with list[0].
