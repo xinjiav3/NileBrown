@@ -2,5 +2,5 @@
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
     ],
-    "gitdoc.enabled": true
+    "gitdoc.enabled": false
 }
