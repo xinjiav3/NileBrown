@@ -20,18 +20,18 @@ def error_cleanup(notebook_file):
         os.remove(destination_path)
 
 def extract_front_matter(notebook_file, cell):
-    front_matter = {}
-    
+    front_matter = {}  # Default empty dictionary for front matter
     source = cell.get('source', '')
     if source.startswith('---'):
-        # Extract front matter from source
         try:
+            # Extract YAML between the first and second '---'
             front_matter = yaml.safe_load(source.split('---', 2)[1])
+            if not isinstance(front_matter, dict):
+                front_matter = {}  # Ensure it's a dictionary
         except yaml.YAMLError as e:
             print(f"Error parsing YAML front matter: {e}")
             error_cleanup(notebook_file)
             sys.exit(1)
-
     return front_matter
 
 def get_relative_output_path(notebook_file):
@@ -46,8 +46,7 @@ def get_relative_output_path(notebook_file):
 def ensure_directory_exists(path):
     # Ensure the directory of the given path exists
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    
-# Function to convert the notebook to Markdown with front matter
+
 def convert_notebook_to_markdown_with_front_matter(notebook_file):
     # Load the notebook file
     with open(notebook_file, 'r', encoding='utf-8') as file:
@@ -64,14 +63,15 @@ def convert_notebook_to_markdown_with_front_matter(notebook_file):
         markdown, _ = exporter.from_notebook_node(notebook)
         
         # Prepend the front matter to the Markdown content
-
-        front_matter_content = "---\n" + "\n".join(f"{key}: {value}" for key, value in front_matter.items()) + "\n---\n\n"
+        if not front_matter:
+            print(f"Warning: No valid front matter found in {notebook_file}. Adding empty front matter.")
+            front_matter_content = "---\n---\n\n"  # Empty front matter
+        else:
+            front_matter_content = "---\n" + "\n".join(f"{key}: {value}" for key, value in front_matter.items()) + "\n---\n\n"
+        
         markdown_with_front_matter = front_matter_content + markdown
         
         # Generate the destination Markdown file name by replacing the extension
-        destination_file = os.path.basename(notebook_file).replace(".ipynb", "_IPYNB_2_.md")
-
-        # Generate the destination path including subdirectories
         destination_path = get_relative_output_path(notebook_file)
         
         # Ensure the output directory exists
@@ -80,8 +80,7 @@ def convert_notebook_to_markdown_with_front_matter(notebook_file):
         # Write the converted Markdown file
         with open(destination_path, "w", encoding="utf-8") as file:
             file.write(markdown_with_front_matter)
-            
-# Function to convert the Jupyter Notebook files to Markdown
+
 def convert_single_notebook(notebook_file):
     try:
         convert_notebook_to_markdown_with_front_matter(notebook_file)
